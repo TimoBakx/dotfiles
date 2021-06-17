@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]
+then
+	echo "Please supply a project name"
+	exit 1
+fi
+
+PROJECT=$1
+DIRECTORY=~/.ssh/$PROJECT
+KEY=$DIRECTORY/key
+
+if [[ -f $KEY ]]
+then
+	echo "The key '$KEY' already exists for $PROJECT. Please remove it before regenerating a new one."
+	exit 1
+fi
+
+if [ ! -d $DIRECTORY ]
+then
+	mkdir $DIRECTORY
+fi
+
+ssh-keygen \
+	-f "$KEY" \
+	-b 4096 \
+	-C "$PROJECT Linku Timo" \
+	-N ""
