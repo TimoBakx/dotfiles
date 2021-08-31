@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sudo apachectl stop
+
+brew unlink php@7.4
+brew link php
+cp /usr/local/etc/httpd/httpd-php8.conf /usr/local/etc/httpd/httpd.conf
+
+sudo apachectl start
