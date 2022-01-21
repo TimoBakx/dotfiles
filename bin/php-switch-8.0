@@ -4,8 +4,8 @@ echo "Stopping apache"
 sudo apachectl stop
 
 brew unlink php@7.4
-brew unlink php@8.0
-brew link php
+brew unlink php
+brew link php@8.0
 
 echo "Overwriting apache configuration for PHP 8"
 cp /usr/local/etc/httpd/httpd-php8.conf /usr/local/etc/httpd/httpd.conf
