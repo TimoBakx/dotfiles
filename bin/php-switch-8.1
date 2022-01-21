@@ -4,12 +4,12 @@ echo "Stopping apache"
 sudo apachectl stop
 
 brew unlink php@7.4
-brew unlink php
-brew link php@8.0
+brew unlink php@8.0
+brew link php
 
-echo "Linking apache configuration for PHP 8.0"
+echo "Linking apache configuration for PHP 8.1"
 unlink /opt/homebrew/etc/httpd/php.conf
-ln -s /opt/homebrew/etc/httpd/php8.0.conf /opt/homebrew/etc/httpd/php.conf
+ln -s /opt/homebrew/etc/httpd/php8.1.conf /opt/homebrew/etc/httpd/php.conf
 
 echo "Starting apache"
 sudo apachectl start

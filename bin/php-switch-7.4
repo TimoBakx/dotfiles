@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "Stopping apache";
+sudo apachectl stop
+
+brew unlink php
+brew unlink php@8.0
+brew link php@7.4
+
+echo "Linking apache configuration for PHP 7"
+unlink /opt/homebrew/etc/httpd/php.conf
+ln -s /opt/homebrew/etc/httpd/php7.4.conf /opt/homebrew/etc/httpd/php.conf
+
+echo "Starting apache";
+sudo apachectl start
