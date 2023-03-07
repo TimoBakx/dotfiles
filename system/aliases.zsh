@@ -8,3 +8,10 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+if [ -e /opt/homebrew/opt/util-linux/bin/cal ]
+then
+  alias showshortcalendar='/opt/homebrew/opt/util-linux/bin/cal -m3'
+else
+  alias showshortcalendar='cal -3'
+fi
