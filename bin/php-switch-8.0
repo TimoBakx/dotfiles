@@ -4,6 +4,7 @@ echo "Stopping apache"
 sudo apachectl stop
 
 brew unlink php@7.4
+brew unlink php@8.1
 brew unlink php
 brew link php@8.0
 
