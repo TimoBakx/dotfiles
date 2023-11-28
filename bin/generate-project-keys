@@ -23,6 +23,6 @@ fi
 
 ssh-keygen \
 	-f "$KEY" \
-	-b 4096 \
+	-t ed25519 \
 	-C "$PROJECT Linku Timo" \
 	-N ""
