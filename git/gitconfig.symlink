@@ -32,3 +32,8 @@
     rebase = true
 [init]
     defaultBranch = main
+[tag]
+	sort = v:refname
+[user]
+	name = Timo Bakx
+	email = github@timobakx.dev

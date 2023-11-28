@@ -1,1 +1,1 @@
-eval "$(symfony-autocomplete)"
+# eval "$(symfony-autocomplete)"
